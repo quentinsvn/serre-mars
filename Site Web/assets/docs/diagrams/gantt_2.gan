@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2020-03-04" view-index="0" gantt-divider-location="508" resource-divider-location="659" version="2.8.10" locale="fr">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="236" order="0"/>
+        <field id="tpd4" name="Date de début" width="134" order="1"/>
+        <field id="tpd5" name="Date de fin" width="134" order="2"/>
+        <option id="color.recent"><![CDATA[#66ff99 #ffcc66 #ff6666 #6666ff #006666 #66ffcc #66ff66 #ff66ff #ff0000 #ff9999]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="389" order="0"/>
+        <field id="1" name="Rôle par défaut" width="266" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="33" name="conception preliminaire" color="#6666ff" meeting="false" start="2019-12-17" duration="20" complete="0" thirdDate="2019-12-17" thirdDate-constraint="0" expand="false">
+            <task id="37" name="redaction du cahier des charges et analyse du besoin" color="#f2a8a8" meeting="false" start="2019-12-17" duration="20" complete="0" thirdDate="2019-12-17" thirdDate-constraint="1" priority="2" expand="true"/>
+            <task id="38" name="planifier le projet et repartir les tâches" color="#ffbcf4" meeting="false" start="2019-12-17" duration="20" complete="0" thirdDate="2019-12-17" thirdDate-constraint="1" expand="true"/>
+            <task id="39" name="rechercher des anteriorités" color="#d885f8" meeting="false" start="2019-12-17" duration="20" complete="0" thirdDate="2019-12-17" thirdDate-constraint="0" expand="true"/>
+            <task id="41" name="rechercher et choisir des solution" color="#bd91ff" meeting="false" start="2019-12-17" duration="20" complete="0" thirdDate="2019-12-17" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="34" name="conception détaillée" color="#ff6666" meeting="false" start="2020-01-13" duration="16" complete="0" thirdDate="2019-12-12" thirdDate-constraint="0" expand="false">
+            <task id="44" name="realiser les modéles numériques et effectuer les simulations comportementales" color="#677df8" meeting="false" start="2020-01-13" duration="16" complete="0" thirdDate="2020-01-13" thirdDate-constraint="0" expand="true"/>
+            <task id="206" name="choisir les matériaux" color="#8cb6ce" meeting="false" start="2020-01-13" duration="16" complete="0" thirdDate="2019-12-12" thirdDate-constraint="0" expand="true"/>
+            <task id="48" name="réaliser les schemas necessaires" color="#88f9df" meeting="false" start="2020-01-13" duration="16" complete="0" thirdDate="2019-12-17" thirdDate-constraint="0" expand="true"/>
+            <task id="49" name="realiser les programmes" color="#7effaa" meeting="false" start="2020-01-13" duration="16" complete="0" thirdDate="2020-01-13" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="67" name="revue de conception" color="#ff0000" meeting="true" start="2020-02-03" duration="0" complete="0" thirdDate="2020-01-06" thirdDate-constraint="0" expand="true"/>
+        <task id="35" name="maquettage prototypage" color="#ffcc66" meeting="false" start="2020-02-10" duration="35" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="false">
+            <task id="216" name="réaliser le maquettage" color="#8cb6ce" meeting="false" start="2020-02-10" duration="35" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true"/>
+            <task id="53" name="interconnecter les constituants electriques et electroniques" color="#fcc29d" meeting="false" start="2020-02-10" duration="35" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true"/>
+            <task id="54" name="transferer les programmes" color="#f35c5c" meeting="false" start="2020-02-10" duration="35" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true"/>
+            <task id="55" name="assembler le prototype" color="#d885f8" meeting="false" start="2020-02-10" duration="35" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="57" name="test et validation" color="#66ff99" meeting="false" start="2020-03-27" duration="11" complete="0" thirdDate="2020-01-07" thirdDate-constraint="0" expand="false">
+            <task id="62" name="tester le prototype" color="#bd91ff" meeting="false" start="2020-03-27" duration="11" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true"/>
+            <task id="64" name="analyser les ecarts entre previsionnel et réel" color="#677df8" meeting="false" start="2020-03-27" duration="11" complete="0" thirdDate="2020-01-13" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="68" name="revue de validation" color="#ff0000" meeting="true" start="2020-04-10" duration="0" complete="0" thirdDate="2020-01-06" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Lucas" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Quentin" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Theo" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Orlane" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="37" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="44" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="48" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="49" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="53" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="54" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="55" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="62" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="64" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="38" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="39" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="41" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="37" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="44" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="48" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="53" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="54" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="55" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="62" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="64" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="38" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="39" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="41" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="37" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="44" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="48" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="49" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="53" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="54" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="55" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="62" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="64" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="38" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="39" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="41" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="206" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="44" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="48" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="216" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="64" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="38" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="39" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="41" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="37" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2019-12-21" end="2020-01-06" resourceid="0"/>
+        <vacation start="2020-02-15" end="2020-03-02" resourceid="0"/>
+        <vacation start="2020-04-11" end="2020-04-27" resourceid="0"/>
+        <vacation start="2019-12-21" end="2020-01-06" resourceid="1"/>
+        <vacation start="2020-02-15" end="2020-03-02" resourceid="1"/>
+        <vacation start="2020-04-11" end="2020-04-27" resourceid="1"/>
+        <vacation start="2019-12-21" end="2020-01-06" resourceid="2"/>
+        <vacation start="2020-02-15" end="2020-03-02" resourceid="2"/>
+        <vacation start="2020-04-11" end="2020-04-27" resourceid="2"/>
+        <vacation start="2019-12-21" end="2020-01-06" resourceid="3"/>
+        <vacation start="2020-02-15" end="2020-03-02" resourceid="3"/>
+        <vacation start="2020-04-11" end="2020-04-27" resourceid="3"/>
+    </vacations>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

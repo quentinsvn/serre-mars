@@ -1,0 +1,347 @@
+/* Feuille de style du site web */
+
+/* Importation de la police d'écriture 'Poppins' */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+/* ---------------------------------------------------
+    STYLE DU MENU VERTICAL
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    overflow: auto !important;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #2b2e33;
+    color: #fff;
+    transition: all 0.3s;
+} 
+
+#sidebar::-webkit-scrollbar {
+    display: none !important;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    background: #32323a;
+}
+
+.serre {
+    color: #4cd137;
+    margin-bottom: 0;
+}
+
+.mars {
+    color: #e84118;
+}
+
+.title_sidebar > .mars:hover {
+    color: #4cd137;
+}
+
+#sidebar ul.components {
+    padding: 10px 0;
+}
+
+.components li {
+    border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 12px 10px;
+    font-size: 14px;
+    display: block;
+    color: #B5B5B5;
+}
+
+#sidebar ul li a i {
+    padding: 8px;
+    width: 30px;
+    text-align: center;
+}
+
+#sidebar ul li a:hover {
+    background: #404247;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background-color: #404247;
+    border-right: 3px solid #e84118;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+    border: none;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.category {
+    color: #B5B5B5;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+ul.CTAs {
+    padding: 0px 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #e84118;
+    color: #ffffff !important;
+}
+
+a.download:hover {
+    background: #c23616 !important;
+    color: #ffffff !important;
+}
+
+a.article {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+a.article:hover {
+    background: #6272b7 !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    STYLE DU CONTENU
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    padding: 0px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modules_content {
+    padding: 0 40px;
+}
+
+#content.active {
+    width: 100%;
+}
+
+.btn-collapse {
+    color: white;
+    border-radius: 0 !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70px;
+    background-color: #e84118;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+/* ---------------------------------------------------
+    VUE D'ENSEMBLE
+----------------------------------------------------- */
+
+.page-header small {
+    font-size: 60% !important;
+}
+
+.stats_card {
+    list-style: none;
+    padding: 0;
+    float: right;
+}
+
+.stats_card li {
+    margin-bottom: -15px;
+}
+
+.stats_card h2 {
+    float: right;
+}
+
+.label {
+    margin-top: -15px;
+    float: right !important;
+}
+
+.btn-play {
+    background-color: #FF0000;
+}
+
+.btn-play:hover {
+    background-color: #e50000 !important;
+}
+
+.btn-play i {
+    color: #ffffff;
+}
+
+.mentions {
+    padding-left: 15px !important;
+}
+
+.mentions li {
+    list-style: none;
+}
+
+.mentions li:before {
+    content: "► ";
+}
+
+.link {
+    color: #e84118;
+}
+
+.link:hover {
+    color: #c23616;
+}
+
+.link:focus {
+    color: #c23616;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #e84118 !important;
+}
+
+.card-header {
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #e84118 !important;
+    border-color: #e84118 !important;
+} 
+
+.btn-primary:focus {
+    color: #fff !important;
+    background-color: #e84118 !important;
+    border-color: #e84118 !important;
+} 
+
+.btn-primary i {
+    color: #fff !important;
+}
+
+.btn-primary i:focus {
+    color: #fff !important;
+}
+
+.btn-primary i:active {
+    color: #fff !important;
+}
+
+.fa-download {
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    OPTIMISATION MOBILE DU SITE (Media queries)
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
