@@ -81,11 +81,11 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Application
+                    <a href="../ressources/programs.php" class="download">Application
                         mobile</a>
                 </li>
                 <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Consulter sur GitHub</a>
+                    <a href="https://github.com/quenquen147/serre-mars" class="article" target="__blank">Consulter sur GitHub</a>
                 </li>
             </ul>
         </nav>
