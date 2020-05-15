@@ -81,7 +81,7 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="../ressources/programs.php" class="download">Application
+                    <a href="../resources/programs.php" class="download">Application
                         mobile</a>
                 </li>
                 <li>

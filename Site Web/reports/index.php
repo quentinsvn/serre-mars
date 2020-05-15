@@ -90,7 +90,7 @@ $results_humidity_sensor = $bdd->query("SELECT * FROM humidity_temp ORDER BY id 
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="../ressources/programs.php" class="download">Application
+                    <a href="../resources/programs.php" class="download">Application
                         mobile</a>
                 </li>
                 <li>
