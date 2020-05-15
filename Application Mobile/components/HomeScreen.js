@@ -4,39 +4,49 @@ import { Container, Header, Left, Body, Right, Title, Card, CardItem, Text, Cont
 
 export default class HomeScreen extends Component {
 
-    constructor() {
-        super(); 
-        this.state = {
-            data: [],
-            datah: [],
-            datat: []
-        }
-    }
+    intervalID;
+
+      state = {
+        data: [],
+        datah: [],
+        datat: []
+      }
 
     componentDidMount() {
-        fetch("https://serre.quentinsavean.fr/api/sensor/dust/pcs/last/")
-        .then((result)=>result.json())
-        .then((res) => {
-            this.setState({
-                data:res[0]
-            })
-        })
+        this.getData();
+        this.getData_humidity();
+        this.getData_temp();
+    }
 
-        fetch("https://serre.quentinsavean.fr/api/sensor/dht11/humidity/last/")
-        .then((resulth)=>resulth.json())
-        .then((resh) => {
-            this.setState({
-                datah:resh[0]
-            })
-        })
+    componentWillUnmount() {
+        clearTimeout(this.intervalID);
+    }
 
-        fetch("https://serre.quentinsavean.fr/api/sensor/dht11/temp/last/")
-        .then((resultt)=>resultt.json())
-        .then((rest) => {
-            this.setState({
-                datat:rest[0]
-            })
-        })
+    getData = () => {
+        fetch('https://serre.quentinsavean.fr/api/sensor/dust/pcs/last/')
+          .then(response => response.json())
+          .then(data => {
+            this.setState({ data: data[0] });
+            this.intervalID = setTimeout(this.getData.bind(this), 3000);
+          });
+      }
+
+      getData_humidity = () => {
+        fetch('https://serre.quentinsavean.fr/api/sensor/dht11/humidity/last/')
+            .then(response => response.json())
+            .then(datah => {
+                this.setState({ datah: datah[0] });
+                this.intervalID = setTimeout(this.getData_humidity.bind(this), 3000);
+        });
+      }
+
+      getData_temp = () => {
+        fetch('https://serre.quentinsavean.fr/api/sensor/dht11/temp/last/')
+        .then(response => response.json())
+        .then(datat => {
+            this.setState({ datat: datat[0] });
+            this.intervalID = setTimeout(this.getData_temp.bind(this), 3000);
+      });
     }
 
     render() {

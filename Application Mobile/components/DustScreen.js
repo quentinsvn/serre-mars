@@ -3,31 +3,40 @@ import { FlatList } from 'react-native';
 import { Container, Header, Left, Body, Right, Title, Card, CardItem, Text, Content, H1 } from 'native-base';
 
 export default class DustScreen extends Component {
-    constructor() {
-        super(); 
-        this.state = {
-            data_pcs: [],
-            data_lpop: []
-        }
-    }
+
+    intervalID;
+
+      state = {
+        data_pcs: [],
+        data_lpop: []
+      }  
 
     componentDidMount() {
-        fetch("https://serre.quentinsavean.fr/api/sensor/dust/pcs/last/")
-        .then((result_pcs)=>result_pcs.json())
-        .then((res_pcs) => {
-            this.setState({ 
-                data_pcs:res_pcs[0]
-            })
-        })
-
-        fetch("https://serre.quentinsavean.fr/api/sensor/dust/lpop/last/")
-        .then((result_lpop)=>result_lpop.json())
-        .then((res_lpop) => {
-            this.setState({ 
-                data_lpop:res_lpop[0]
-            })
-        })
+        this.getData_pcs();
+        this.getData_lpop();
     }
+
+    componentWillUnmount() {
+        clearTimeout(this.intervalID);
+    }
+
+    getData_pcs = () => {
+        fetch('https://serre.quentinsavean.fr/api/sensor/dust/pcs/last/')
+            .then(response => response.json())
+            .then(data_pcs => {
+                this.setState({ data_pcs: data_pcs[0] });
+                this.intervalID = setTimeout(this.getData_pcs.bind(this), 3000);
+        });
+      }
+
+      getData_lpop = () => {
+        fetch('https://serre.quentinsavean.fr/api/sensor/dust/lpop/last/')
+            .then(response => response.json())
+            .then(data_lpop => {
+                this.setState({ data_lpop: data_lpop[0] });
+                this.intervalID = setTimeout(this.getData_lpop.bind(this), 3000);
+        });
+      }
     render() {
         return (
             <Container>

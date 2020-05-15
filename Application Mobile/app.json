@@ -15,6 +15,10 @@
       "backgroundColor": "#263554",
       "hideExponentText": false
     },
+    "splash": {
+      "image": "./assets/icons/splash.png",
+      "backgroundColor": "#263554"
+    },
     "packagerOpts": {
       "assetExts": [
         "ttf",

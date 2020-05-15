@@ -3,30 +3,38 @@ import { FlatList } from 'react-native';
 import { Container, Header, Left, Body, Right, Title, Card, CardItem, Text, Content, H1 } from 'native-base';
 
 export default class HumidityScreen extends Component {
-    constructor() {
-        super(); 
-        this.state = {
-            data_humidity: [],
-            data_temp: []
-        }
+    intervalID;
+
+      state = {
+        datah: [],
+        datat: []
+      }
+
+      componentDidMount() {
+        this.getData_humidity();
+        this.getData_temp();
     }
 
-    componentDidMount() {
-        fetch("https://serre.quentinsavean.fr/api/sensor/dht11/humidity/last/")
-        .then((result_humidity)=>result_humidity.json())
-        .then((res_humidity) => {
-            this.setState({ 
-                data_humidity:res_humidity[0]
-            })
-        })
+    componentWillUnmount() {
+        clearTimeout(this.intervalID);
+    }
 
-        fetch("https://serre.quentinsavean.fr/api/sensor/dht11/temp/last/")
-        .then((result_temp)=>result_temp.json())
-        .then((res_temp) => {
-            this.setState({ 
-                data_temp:res_temp[0]
-            })
-        })
+    getData_humidity = () => {
+        fetch('https://serre.quentinsavean.fr/api/sensor/dht11/humidity/last/')
+            .then(response => response.json())
+            .then(datah => {
+                this.setState({ datah: datah[0] });
+                this.intervalID = setTimeout(this.getData_humidity.bind(this), 3000);
+        });
+      }
+
+      getData_temp = () => {
+        fetch('https://serre.quentinsavean.fr/api/sensor/dht11/temp/last/')
+        .then(response => response.json())
+        .then(datat => {
+            this.setState({ datat: datat[0] });
+            this.intervalID = setTimeout(this.getData_temp.bind(this), 3000);
+      });
     }
     render() {
         return (
@@ -47,7 +55,7 @@ export default class HumidityScreen extends Component {
                         <CardItem>
                             <Body>
                             <FlatList 
-                                data={[this.state.data_humidity]}
+                                data={[this.state.datah]}
                                 renderItem={ ({item}) => 
                                 <Text>
                                     <H1>{item.humidity}%</H1>
@@ -65,7 +73,7 @@ export default class HumidityScreen extends Component {
                         <CardItem>
                             <Body>
                             <FlatList 
-                                data={[this.state.data_temp]}
+                                data={[this.state.datat]}
                                 renderItem={ ({item}) => 
                                 <Text>
                                     <H1>{item.temp}°C</H1>

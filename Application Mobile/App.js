@@ -1,16 +1,13 @@
-// You can import Ionicons from @expo/vector-icons if you use Expo or
-// react-native-vector-icons/Ionicons otherwise.
 import * as React from 'react';
-import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import GeneralStatusBarColor from './components/GeneralStatusBarColor';
 
 import HomeScreen from './components/HomeScreen';
 import HumidityScreen from './components/HumidityScreen';
 import DustScreen from './components/DustScreen';
 import AboutScreen from './components/AboutScreen';
-import Source from './components/JSONScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -19,6 +16,8 @@ export default function App() {
   
   return (
     <NavigationContainer>
+      <GeneralStatusBarColor backgroundColor="#d03a15"
+        barStyle="light-content"/>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
