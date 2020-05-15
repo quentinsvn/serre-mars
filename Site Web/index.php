@@ -1,6 +1,6 @@
 <?php
     include('scripts/config.php');
-    include('scripts/stats_dust.php');
+    include('scripts/functions.php');
     $reqdust = $bdd->query("SELECT * FROM dust ORDER BY id DESC");
     $dust = $reqdust->fetch();
     $reqht = $bdd->query("SELECT * FROM humidity_temp ORDER BY id DESC");
@@ -27,9 +27,9 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
+    <!-- Fichier CSS du site -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Scrollbar Custom CSS -->
+    <!-- Scrollbar Custom CSS CDN -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
@@ -107,7 +107,7 @@
             </ul>
         </nav>
 
-        <!-- Page Content  -->
+        <!-- Contenu -->
         <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -273,10 +273,10 @@
 
         var ctx = document.getElementById('myChart').getContext('2d');
         var chart = new Chart(ctx, {
-            // The type of chart we want to create
+            // Type de graphique
             type: 'bar',
 
-            // The data for our dataset
+            // Données du graphique
             data: {
                 labels: ['<?php results_humidity_time_function(0) ?>', '<?php results_humidity_time_function(1) ?>', '<?php results_humidity_time_function(2) ?>', '<?php results_humidity_time_function(3) ?>', '<?php results_humidity_time_function(4) ?>', '<?php results_humidity_time_function(5) ?>', '<?php results_humidity_time_function(6) ?>'],
                 datasets: [{
@@ -305,7 +305,7 @@
                 }],
             },
 
-            // Configuration options go here
+            // Options du graphique
             options: {
                 responsive: true,
                 scales: {

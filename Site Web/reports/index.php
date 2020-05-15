@@ -19,9 +19,9 @@ $results_humidity_sensor = $bdd->query("SELECT * FROM humidity_temp ORDER BY id 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
+    <!-- Fichier CSS du site -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Scrollbar Custom CSS -->
+    <!-- Scrollbar Custom CSS CDN -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
@@ -99,7 +99,7 @@ $results_humidity_sensor = $bdd->query("SELECT * FROM humidity_temp ORDER BY id 
             </ul>
         </nav>
 
-        <!-- Page Content  -->
+        <!-- Contenu -->
         <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">

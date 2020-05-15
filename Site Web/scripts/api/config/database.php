@@ -1,14 +1,14 @@
 <?php
 class Database{
   
-    // specify your own database credentials
+    // identifiants de votre base de données
     private $host = "xx.xx.xx.xx";
     private $db_name = "xxx";
     private $username = "xxx";
     private $password = "xxx";
     public $conn;
   
-    // get the database connection
+    // connexion à la base de données
     public function getConnection(){
   
         $this->conn = null;

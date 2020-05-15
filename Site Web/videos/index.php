@@ -13,9 +13,9 @@
     <meta name="author" content="Quentin S." />
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
+    <!-- Fichier CSS du site -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Scrollbar Custom CSS -->
+    <!-- Scrollbar Custom CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <!-- Font Awesome JS -->
@@ -91,7 +91,7 @@
             </ul>
         </nav>
 
-        <!-- Page Content  -->
+        <!-- Contenu -->
         <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -131,7 +131,7 @@
                                             <source src="https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4" type="video/mp4" />
                                             <source src="https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.webm" type="video/webm" />
 
-                                            <!-- Captions are optional -->
+                                            <!-- Sous-titres de la vidéo -->
                                             <track kind="captions" label="Français" src="captions.vtt" srclang="fr" default />
                                         </video>
                                     </div>
@@ -147,7 +147,7 @@
                                             <source src="https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.mp4" type="video/mp4" />
                                             <source src="https://civam.fr/wp-content/uploads/sites/4/2014/10/big_buck_bunny.webm" type="video/webm" />
 
-                                            <!-- Captions are optional -->
+                                            <!-- Sous-titres de la vidéo -->
                                             <track kind="captions" label="Français" src="captions.vtt" srclang="fr" default />
                                         </video>
                                     </div>

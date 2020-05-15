@@ -14,9 +14,9 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
+    <!-- Fichier CSS du site -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Scrollbar Custom CSS -->
+    <!-- Scrollbar Custom CSS CDN -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
@@ -94,7 +94,7 @@
             </ul>
         </nav>
 
-        <!-- Page Content  -->
+        <!-- Contenu  -->
         <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -116,14 +116,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-12 col-xl-3 mb-2">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Site Web</a>
                             <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Capteurs</a>
                             <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Application Mobile</a>
                         </div>
                     </div>
-                    <div class="col-9">
+                    <div class="col-12 col-xl-9">
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                 <ul class="list-group">
