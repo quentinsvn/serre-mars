@@ -19,7 +19,6 @@ old_val = [0, 0.0, 0.0]
 
 while True:
 
-	# defaults to pin 2
 	new_val = grovepi.dust_sensor_read()
 	if old_val[0] != new_val[0]:
 		time.sleep(10)
@@ -42,5 +41,4 @@ while True:
 		mydb.close()
 		old_val = new_val
 
-# and disable the interrupt on pin 2
 grovepi.dust_sensor_dis()
