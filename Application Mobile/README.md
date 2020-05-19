@@ -25,11 +25,11 @@ expo start
 
 Android
 ```js
-expo publish:android
+expo build:android
 ```
 iOS
 ```js
-expo publish:ios
+expo build:ios
 ```
 
 © Quentin Savéan
