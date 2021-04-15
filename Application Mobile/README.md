@@ -1,6 +1,6 @@
 # Application mobile
 
-Application mobile du projet de Terminale STI2D "[Serre sur Mars](https://serre.quentinsavean.fr/)" fait avec la biliothèque [react native](https://reactnative.dev/).
+Application mobile du projet de Terminale STI2D "[Serre sur Mars](https://play.google.com/store/apps/details?id=com.distasy.serremars)" fait avec la biliothèque [react native](https://reactnative.dev/).
 
 ## Installation des modules
 
